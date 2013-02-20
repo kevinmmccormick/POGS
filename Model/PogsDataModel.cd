@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Pogs.DataModel.ClientEntry">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="_customFields" Hidden="true" />
+      <Field Name="_iconIndex" Hidden="true" />
+      <Field Name="_name" Hidden="true" />
+      <Field Name="_notes" Hidden="true" />
+      <Field Name="_values" Hidden="true" />
+      <Method Name="NotifyPropertyChanged" Hidden="true" />
+      <Method Name="OnPropertyChanged" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>BAAwIAAAIEAAAoAEIAQAAgQAhAAAAAAAAAAEAQIAACQ=</HashCode>
+      <FileName>DataModel\ClientEntry.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pogs.DataModel.ClientRecord">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="_clientId" Hidden="true" />
+      <Field Name="_entries" Hidden="true" />
+      <Field Name="_name" Hidden="true" />
+      <Method Name="NotifyPropertyChange" Hidden="true" />
+      <Method Name="OnEntriesAdded" Hidden="true" />
+      <Method Name="OnEntriesRemoved" Hidden="true" />
+      <Method Name="OnPropertyChanged" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAoAAAAEAAAKMAoAAAAAQAgAACAAAiABAEAAAIAAA=</HashCode>
+      <FileName>DataModel\ClientRecord.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pogs.DataModel.EntryTemplate">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="_fields" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAACAAAQEAAAAAAAAAAAAAQAAgAA=</HashCode>
+      <FileName>DataModel\EntryTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pogs.DataModel.PogsDatabase">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="_clientsById" Hidden="true" />
+      <Field Name="_clientsByObject" Hidden="true" />
+      <Field Name="_connection" Hidden="true" />
+      <Field Name="_customFieldsById" Hidden="true" />
+      <Field Name="_entriesById" Hidden="true" />
+      <Field Name="_entriesByObject" Hidden="true" />
+      <Field Name="_templateFieldsById" Hidden="true" />
+      <Field Name="_templatesById" Hidden="true" />
+      <Field Name="_templatesByObject" Hidden="true" />
+      <Field Name="_templateValues" Hidden="true" />
+      <Field Name="_username" Hidden="true" />
+      <Method Name="Connect" Hidden="true" />
+      <Method Name="Connection_StateChange" Hidden="true" />
+      <Method Name="Disconnect" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="GetConnectionString" Hidden="true" />
+      <Method Name="GetFieldValueId" Hidden="true" />
+      <Method Name="OnClientsAdded" Hidden="true" />
+      <Method Name="OnClientsRemoved" Hidden="true" />
+      <Method Name="OnConnectionUnexpectedlyClosed" Hidden="true" />
+      <Method Name="PogsDatabase" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Class Name="Pogs.DataModel.PogsDatabase.TemplateFieldValueRelation" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DataModel\PogsDatabase.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>GAQAYADAA2xCwCChICBAAIoAEBAAAEAAAAIAAAABRAA=</HashCode>
+      <FileName>DataModel\PogsDatabase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pogs.DataModel.EntryField">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAABAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>DataModel\EntryField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Pogs.DataModel.EntryFieldType">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAgAAAAAAAQAAAAAAAEAADAAAAAAAAAAA=</HashCode>
+      <FileName>DataModel\EntryFieldType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

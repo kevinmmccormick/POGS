@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{84C53C51-85A2-4711-9CE4-7823A8B57E06}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pogs.WinUI</RootNamespace>
+    <AssemblyName>Pogs</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Utilities\LogUtility.cs" />
+    <Compile Include="Utilities\UserSettings.cs" />
+    <Compile Include="Views\AboutPogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AboutPogs.Designer.cs">
+      <DependentUpon>AboutPogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddEditClientDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddEditClientDialog.Designer.cs">
+      <DependentUpon>AddEditClientDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddEditFieldDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddEditFieldDialog.Designer.cs">
+      <DependentUpon>AddEditFieldDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddEntryDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddEntryDialog.Designer.cs">
+      <DependentUpon>AddEntryDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChooseDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ChooseDatabase.Designer.cs">
+      <DependentUpon>ChooseDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\CommandManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewModels\CommandManager.Designer.cs">
+      <DependentUpon>CommandManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\CreateUserViewModel.cs" />
+    <Compile Include="ViewModels\DatabaseSecurityDialogViewModel.cs" />
+    <Compile Include="ViewModels\ChildCommand.cs" />
+    <Compile Include="ViewModels\IDialogResultCommand.cs" />
+    <Compile Include="ViewModels\SecurityEditorViewModel.cs" />
+    <Compile Include="ViewModels\SecurityPrincipalSelectorViewModel.cs" />
+    <Compile Include="Views\ClientSecurityDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ClientSecurityDialog.Designer.cs">
+      <DependentUpon>ClientSecurityDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateUserDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CreateUserDialog.Designer.cs">
+      <DependentUpon>CreateUserDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DatabaseSecurityDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DatabaseSecurityDialog.Designer.cs">
+      <DependentUpon>DatabaseSecurityDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DeleteCustomFieldDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DeleteCustomFieldDialog.Designer.cs">
+      <DependentUpon>DeleteCustomFieldDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConfirmDeleteDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ConfirmDeleteDialog.Designer.cs">
+      <DependentUpon>ConfirmDeleteDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LockScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LockScreen.Designer.cs">
+      <DependentUpon>LockScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LogViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LogViewer.Designer.cs">
+      <DependentUpon>LogViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PurgeClientDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PurgeClientDialog.Designer.cs">
+      <DependentUpon>PurgeClientDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ResetPinDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ResetPinDialog.Designer.cs">
+      <DependentUpon>ResetPinDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SecurityPrincipalSelectorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SecurityPrincipalSelectorDialog.Designer.cs">
+      <DependentUpon>SecurityPrincipalSelectorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SortableBindingList.cs" />
+    <Compile Include="Views\TemplateManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TemplateManager.Designer.cs">
+      <DependentUpon>TemplateManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Views\AboutPogs.resx">
+      <DependentUpon>AboutPogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddEditClientDialog.resx">
+      <DependentUpon>AddEditClientDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddEditFieldDialog.resx">
+      <DependentUpon>AddEditFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddEntryDialog.resx">
+      <DependentUpon>AddEntryDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ChooseDatabase.resx">
+      <DependentUpon>ChooseDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ClientSecurityDialog.resx">
+      <DependentUpon>ClientSecurityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CreateUserDialog.resx">
+      <DependentUpon>CreateUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DatabaseSecurityDialog.resx">
+      <DependentUpon>DatabaseSecurityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DeleteCustomFieldDialog.resx">
+      <DependentUpon>DeleteCustomFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ConfirmDeleteDialog.resx">
+      <DependentUpon>ConfirmDeleteDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LockScreen.resx">
+      <DependentUpon>LockScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LogViewer.resx">
+      <DependentUpon>LogViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PurgeClientDialog.resx">
+      <DependentUpon>PurgeClientDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ResetPinDialog.resx">
+      <DependentUpon>ResetPinDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SecurityPrincipalSelectorDialog.resx">
+      <DependentUpon>SecurityPrincipalSelectorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TemplateManager.resx">
+      <DependentUpon>TemplateManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SecurityEditorView.resx">
+      <DependentUpon>SecurityEditorView.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ViewModels\ClientEntryView.cs" />
+    <Compile Include="ViewModels\ClientSecurityDialogViewModel.cs" />
+    <Compile Include="ViewModels\EntryFieldRow.cs" />
+    <Compile Include="ViewModels\EntryFieldView.cs" />
+    <Compile Include="ViewModels\EntryNotes.cs" />
+    <Compile Include="ViewModels\EntryFieldTypeView.cs" />
+    <Compile Include="ViewModels\GroupPrincipalViewModel.cs" />
+    <Compile Include="ViewModels\SecurityDescriptorViewModel.cs" />
+    <Compile Include="ViewModels\SecurityPrincipalViewModel.cs" />
+    <Compile Include="ViewModels\TemplateView.cs" />
+    <Compile Include="ViewModels\ViewModel.cs" />
+    <Compile Include="Views\MvvmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MvvmUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SecurityEditorView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SecurityEditorView.Designer.cs">
+      <DependentUpon>SecurityEditorView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Journal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\website.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Network.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\cellphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddItem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\Pogs.DataModel.ClientEntry.datasource" />
+    <None Include="Properties\DataSources\Pogs.DataModel.ClientRecord.datasource" />
+    <None Include="Properties\DataSources\Pogs.DataModel.EntryTemplate.datasource" />
+    <None Include="Properties\DataSources\Pogs.VisualModel.EntryFieldRow.datasource" />
+    <None Include="Properties\DataSources\Pogs.VisualModel.EntryNotes.datasource" />
+    <None Include="Resources\RemoveItem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LogViewer.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\DataSources\Pogs.VisualModel.EntryFieldTypeView.datasource" />
+    <None Include="Properties\DataSources\Pogs.VisualModel.EntryFieldView.datasource" />
+    <None Include="Properties\DataSources\Pogs.VisualModel.TemplateView.datasource" />
+    <None Include="Resources\delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CopyHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\Pogs.PogsMain.ResetPinDialog+ResetPinViewModel.datasource" />
+    <None Include="Properties\DataSources\Pogs.ViewModels.SecurityPrincipalViewModel.datasource" />
+    <None Include="Resources\PrimaryKeyHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Keys.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\Pogs.ViewModels.ClientSecurityDialogViewModel.datasource" />
+    <None Include="Properties\DataSources\Pogs.ViewModels.DatabaseSecurityDialogViewModel.datasource" />
+    <None Include="Properties\DataSources\Pogs.ViewModels.SecurityDescriptorViewModel.datasource" />
+    <None Include="Properties\DataSources\Pogs.ViewModels.SecurityEditorViewModel.datasource" />
+    <None Include="Properties\DataSources\Pogs.ViewModels.SecurityPrincipalSelectorViewModel.datasource" />
+    <None Include="Properties\DataSources\Pogs.WinUI.ViewModels.CreateUserViewModel.datasource" />
+    <None Include="Resources\user.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{A338C699-099B-4ADA-84E6-3E534BC83B24}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository\Repository.csproj">
+      <Project>{06620A66-CDA0-4F8B-BB71-E5373299D190}</Project>
+      <Name>Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="License.txt" />
+    <Content Include="Readme.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
